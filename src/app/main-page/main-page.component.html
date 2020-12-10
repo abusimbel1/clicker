@@ -1,0 +1,53 @@
+<div class="container">
+  <div class="content">
+    <div class="left">
+      <h1>Hello, {{ userNameService.userName }}</h1>
+      <h3>You have made {{ userNameService.counter }} clicks</h3>
+      <app-game-button></app-game-button>
+      <h4>Timer: {{ userNameService.timer }} sec</h4>
+    </div>
+    <div class="right">
+      <p>Please select mode:</p>
+      <input
+        type="radio"
+        id="easy"
+        name="level"
+        value="5"
+        checked
+        [(ngModel)]="userNameService.gameDuration"
+        [disabled]="userNameService.isGameRunning"
+        (click)="changeTimer($event)"
+      />
+      <label for="easy">5 seconds</label><br />
+      <input
+        type="radio"
+        id="mid"
+        name="level"
+        value="10"
+        [(ngModel)]="userNameService.gameDuration"
+        [disabled]="userNameService.isGameRunning"
+        (click)="changeTimer($event)"
+      />
+      <label for="mid">10 seconds</label><br />
+      <input
+        type="radio"
+        id="hard"
+        name="level"
+        value="15"
+        [(ngModel)]="userNameService.gameDuration"
+        [disabled]="userNameService.isGameRunning"
+        (click)="changeTimer($event)"
+      />
+      <label for="hard">15 seconds</label>
+      <br />
+      <button class="resetButt" (click)="resetGame()">reset</button>
+
+      <button class="changeNameButt" (click)="changeNameHandler()">
+        Change name
+      </button>
+      <br />
+
+      <app-records-table></app-records-table>
+    </div>
+  </div>
+</div>

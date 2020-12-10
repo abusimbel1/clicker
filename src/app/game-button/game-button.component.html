@@ -1,0 +1,7 @@
+<button
+  class="gameButt"
+  (click)="increaseCounter($event)"
+  [disabled]="userNameService.disablePlayBut"
+>
+  {{ userNameService.buttonText }}
+</button>

@@ -1,0 +1,16 @@
+<hr />
+<div class="table">
+  <p>
+    Previous record for {{ userNameService.gameDuration }} sec is
+    {{ userNameService.recordToDisplay }} clicks
+  </p>
+  <hr />
+  <h3
+    [ngClass]="{
+      red: !userNameService.isGoodResult,
+      green: userNameService.isGoodResult
+    }"
+  >
+    {{ userNameService.resultTitle }}
+  </h3>
+</div>

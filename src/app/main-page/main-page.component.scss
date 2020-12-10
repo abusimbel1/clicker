@@ -1,0 +1,37 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.content {
+  width: 50vw;
+  height: 40vh;
+  border: 2px solid black;
+  display: flex;
+  border-radius: 8px;
+
+  .left {
+    width: 40%;
+    margin-left: 50px;
+  }
+  .right {
+    padding-right: 50px;
+    width: 60%;
+    .resetButt {
+      width: 80px;
+      height: 30px;
+      margin: 20px 0;
+      border: 2px solid grey;
+      border-radius: 5px;
+    }
+    .changeNameButt {
+      width: 120px;
+      margin-left: 30px;
+      height: 30px;
+      border: 2px solid grey;
+      border-radius: 5px;
+    }
+  }
+}
